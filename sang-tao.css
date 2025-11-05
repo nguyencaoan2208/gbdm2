@@ -1,0 +1,43 @@
+.grid{
+    display: grid;
+}
+.creative-grid{
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 10px;
+    margin: 16px 0;
+}
+.creative-grid .item{
+    width: 100%;
+}
+.creative-grid .creative-card{
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    border: white 8px solid; box-sizing: border-box;
+}
+.creative-grid .creative-card .media{
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden;
+    background-color: rgba(255, 232, 248, 0.43);
+}
+.creative-grid .creative-card:hover img{
+    transform: scale(1.08);
+}
+.creative-grid .creative-card:hover .media{
+    background-color: rgba(255, 232, 248, 0.771);
+}
+.creative-grid .creative-card:hover .name{
+   color: var(--primary-color);
+}
+.creative-grid .creative-card .media img{
+    width: 100%; height: 100%; object-fit: cover;
+}
+.creative-grid .creative-card .name{
+    width: 100%; text-align: center;
+    margin: 4px 0;
+}
+.creative-grid .creative-card .date{
+    width: 100%; text-align: center;
+    margin: 4px 0;
+}

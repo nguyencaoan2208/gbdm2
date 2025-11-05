@@ -1,0 +1,256 @@
+.hero-banner{
+    width: 100%; height: 100vh;
+    box-sizing: border-box;
+    /* background-color: aliceblue; */
+
+}
+.hero-banner .images{
+    width: 100%; height: 100%; overflow: hidden;
+    position: relative;
+}
+.hero-banner .images img{
+    position: relative;
+}
+.hero-banner .images .logo-wrapper{
+    position: absolute;
+    width: 40vw;
+    height: max-content;
+    left: 50%; top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    /* background-color: black; */
+}
+.hero-banner .images .logo-wrapper #hero-banner-logo{
+    width: 100%;
+}
+
+.hero-banner .images .cloud-1-wrapper{
+    position: absolute;
+    width: 32vw;
+    left: -10%; bottom: 10%;
+
+}
+.hero-banner .images .cloud-2-wrapper{
+    position: absolute;
+    width: 40vw;
+    right: -10%; bottom: 15%;
+
+}
+.hero-banner .images #hero-banner-cloud1{
+    width: 100%;
+}
+.hero-banner .images #hero-banner-cloud2{
+    width: 100%;
+}
+.hero-banner .images img {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+.my-float {
+  --float-distance: 20px;   /* khoảng cách lên xuống */
+  --float-speed: 3s;        /* thời gian 1 chu kỳ */
+  --float-ease: ease-in-out;
+  display: inline-block;
+  transform-origin: center;
+  filter: drop-shadow(rgba(0, 0, 0, 0.259) 0 0px 0px);
+  animation: float-bob var(--float-speed) var(--float-ease) infinite;
+  will-change: transform;
+}
+.my-float2 {
+  --float-distance: 10px;   /* khoảng cách lên xuống */
+  --float-speed: 4s;        /* thời gian 1 chu kỳ */
+  --float-ease: ease-in-out;
+  display: inline-block;
+  transform-origin: center;
+  animation: float-bob var(--float-speed) var(--float-ease) infinite;
+  will-change: transform;
+}
+
+@keyframes float-bob {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(calc(-1 * var(--float-distance))); filter: drop-shadow(rgba(36, 48, 119, 0.259) 0 10px 20px);}
+  100% { transform: translateY(0); }
+}
+@keyframes float-bob2 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(calc(-1 * var(--float-distance))); }
+  100% { transform: translateY(0); }
+}
+
+
+
+
+
+p.highlight-paragraph{
+    width: 100%;
+    padding: 50px 0;
+}
+p.center-align{
+    text-align: center;
+}
+
+.introduce{
+    width: 100%;
+    align-content: center;
+    display: flex; flex-direction: column; align-items: center;
+}
+.introduce p.highlight-paragraph{
+    width: 80%;
+}
+
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.gallery .item{
+    background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.705), rgba(255, 255, 255, 0.468));;
+    width: 100%;    
+    aspect-ratio: 1;
+    
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.3s ease;
+}
+.gallery .item:hover{
+    background-image: var(--pastel-hover-background);
+}
+.gallery .item img{
+    width: 96%;
+}
+.gallery .item:hover img{
+    width: 100%;
+}
+
+/* Trạng thái mặc định: ẩn nhẹ và chờ kích hoạt */
+.scroll-float {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+/* Khi xuất hiện trong viewport */
+.scroll-float.in-view {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+
+/* category banner */
+.category-banners{
+    content: "";
+    width: 100%;
+    margin: 20px 0;
+    /* background-color: rgb(28, 162, 162); */
+    border-radius: 16px;
+    overflow: hidden;
+}
+.category-banners .banner{
+    width: 100%; height: 100%;
+    aspect-ratio: 16/8;
+    overflow: hidden;
+}
+.category-banners .banner img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.category-banners .banner:hover img{
+    transform: scale(1.1);
+}
+
+
+/* Slide category banners */
+.category-banners {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 100vw;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+.category-banners .slides {
+  display: flex;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.category-banners .banner {
+  min-width: 100%; aspect-ratio: 16/8;
+  flex-shrink: 0;
+  border-radius: 16px; overflow: hidden;
+}
+
+.category-banners .banner img {
+  width: 100%; height: 100%; object-fit: cover;
+  /* height: auto; */
+  display: block;
+  border-radius: 16px;
+}
+
+/* Dots */
+.category-banners .dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category-banners .dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.category-banners .dots button.active {
+  background: var(--primary-color);
+}
+
+
+
+
+/* Contact */
+.contact{
+    width: 100%; height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: white;
+    border-radius: 16px; overflow: hidden;
+}
+.contact .contact-image{
+    width: 100%;
+    height: 100%;
+}
+.contact .contact-image img{
+    width: 100%; height: 100%; object-fit: cover;
+}
+.contact .contact-detail{
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    display: flex; flex-direction: column;
+}
+.contact .contact-detail ul{
+    margin-bottom: 2rem;
+}
+.contact .contact-detail ul li{
+    line-height: 2;
+}
+.contact .contact-detail .contact-buttons{
+    width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+}
+.contact .contact-detail .contact-buttons .item{
+    width: max-content;
+    width: 38%;
+    display: inline-block;
+}

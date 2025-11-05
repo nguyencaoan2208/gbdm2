@@ -1,0 +1,187 @@
+/* === Gấu Bông Đình May - Style === */
+.gbdm-intro {
+  font-family: "Poppins", "Helvetica Neue", sans-serif;
+  color: #333;
+  padding: 60px 20px;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+/* --- Hero section --- */
+.gbdm-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.gbdm-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+.gbdm-title .highlight {
+  color: var(--primary-color);
+}
+.gbdm-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 15px auto 25px;
+  max-width: 1000px;
+}
+.gbdm-cta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background:  var(--primary-color);
+  color: #fff;
+}
+.btn-primary:hover {
+  background:  var(--primary-color);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border: 2px solid  var(--primary-color);
+  color:  var(--primary-color);
+}
+.btn-outline:hover {
+  background:  var(--primary-color);
+  color: #fff;
+}
+.btn-link {
+  color:  var(--primary-color);
+  text-decoration: underline;
+}
+.btn-link:hover {
+  opacity: 0.8;
+}
+
+/* --- Section titles --- */
+.section-title {
+  font-size: 1.6rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+}
+/* .section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background:  var(--primary-color);
+  border-radius: 2px;
+  margin-top: 8px;
+} */
+
+/* --- Story --- */
+.gbdm-story {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.gbdm-story p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Features --- */
+.gbdm-features {
+  margin-bottom: 50px;
+}
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+}
+.feature-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.feature-title {
+  color:  var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.feature-desc {
+  color: #555;
+}
+
+/* --- What we offer --- */
+.gbdm-what-we-offer {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 25px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.gbdm-what-we-offer .lead {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 20px;
+}
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.offer-list li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* --- Future --- */
+.gbdm-future {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.gbdm-future p {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* --- Footer --- */
+.gbdm-footer {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 2px dashed #f1d5cf;
+}
+.footer-note {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .gbdm-title {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .gbdm-intro {
+    padding: 40px 15px;
+  }
+  .btn {
+    font-size: 0.95rem;
+  }
+}
